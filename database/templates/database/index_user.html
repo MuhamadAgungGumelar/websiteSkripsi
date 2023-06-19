@@ -1,0 +1,98 @@
+{% extends "html_user/base_user.html"%}
+{% load static %}
+{% load tz %}
+{% load widget_tweaks%}
+
+{% block app_css%} 
+<link rel="stylesheet" type="text/css" href="{% static "database/css/styless.css" %}">
+{% endblock app_css%} 
+
+{% block base%}
+<section class="jumbotron jumbotron-fluid text-black text-center" style="margin-top: 3rem; margin-bottom: -5rem;">
+    <h1 class="display-4 ">{{ Judul }}</h1>
+</section>
+
+
+<div class="container bg-white text-dark shadow" style="margin-bottom: 70px;">
+    <div style="height: auto;">
+        <br>
+        <div class="container" style="padding-bottom: 27px;">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <b>List of X-ray Thorax Images</b>
+                        </div>
+                        <div class="card-body">
+                            <a href="{% url 'database:add' %}" class="btn btn-success" style="margin-bottom: 4px;
+                            margin-top: -19px;">Add</a>
+                            <table class = "table" >
+                                <thead class = "thead-light">
+                                    <tr>
+                                        <th widht="3%">No.</th>
+                                        <th width="37%">Category</th>
+                                        <th width="20%">File</th>
+                                        <th></th>
+                                        <th width="20%">Time</th>
+                                        <th width="15%">Update</th>
+                                        <th width="15%">Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    {% for post in Post_Model%}
+                                    <tr >
+                                        <th scope="row">{{forloop.counter}}</th>
+                                        <td>{{post.category}} </td>
+                                        <td>{{post.gambar}}</td>
+                                        <td><a href="images/{{post.slug}}" class="bi bi-eye-fill text-info"></a></td>
+                                        <td>
+                                        {% if post.waktu_update %}
+                                            {{ post.waktu_update_indonesia }}
+                                        {% else %}
+                                            {{ post.waktu_indonesia }}
+                                        {% endif %}
+                                        </td>
+                                        <td >
+                                            <a class="bi bi-recycle text-warning " href="{% url 'database:update' post.id %}" role="button"></a>
+                                        </td>
+                                        <td>
+                                            <a class="bi bi-trash3-fill text-danger" href="{% url 'database:delete' post.id %}" role="button"></a>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>   
+                            {% if Post_Model.has_other_pages %}
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    {% if Post_Model.has_previous %}
+                                        <li class="page-item"><a class="page-link" href="?page={{ Post_Model.previous_page_number }}">&laquo;</a></li>
+                                    {% else %}
+                                        <li class="disabled"><span>&laquo;</span></li>
+                                    {% endif %}
+
+                                    {% for i in Post_Model.paginator.page_range %}
+                                        {% if Post_Model.number == i %}
+                                            <li class="active"><a class="page-link">{{i}}</a></li>
+                                        {% else %}
+                                            <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                                        {% endif %}
+                                    {% endfor%}
+
+                                    {% if Post_Model.has_next %}
+                                        <li class="page-item"><a class="page-link" href="?page={{ Post_Model.next_page_number }}">&raquo;</a></li>
+                                    {% else %}
+                                        <li class="disabled"><span>&raquo;</span></li>
+                                    {% endif %}
+                                </ul>  
+                            </nav>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>             
+    </div>
+</div>
+{% endblock base%}
+

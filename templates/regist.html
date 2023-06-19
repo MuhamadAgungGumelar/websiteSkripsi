@@ -1,0 +1,35 @@
+{% extends "html_anonymous/base_anonymous.html"%}
+{% load widget_tweaks%}
+
+{% block base%}
+<section class="container-fluid login" >
+    <div class="container-login">
+        <div class="input-group justify-content-center">
+            <form method="POST">
+                {%csrf_token%}
+                    <h1 class="display-4 fw-bold text-center">{{ Judul }}</h1>
+                    <br>
+                    {% if salah_regist %}
+                        <div class="alert alert-danger" role="alert">
+                            Password Not Matching
+                        </div>
+                    {% endif %}
+                    <div class="input-group mb-3">
+                        <input type="text" name="username" maxlength="150" autofocus placeholder="Username" class="form-control" required_id="id_username">
+                    </div>
+                    <div class="input-group mb-3" style="font-size: 1.2rem; width: 20rem;">
+                        <input type="text" name="email" maxlength="254" placeholder="Email" class="form-control" required_id="id_email">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" name="password1" placeholder="Password" class="form-control" required_id="id_password1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" name="password2" placeholder="Password Confirmation" class="form-control" required_id="id_password2">
+                    </div>
+                    <button type="submit" class="btn btn-success justify-content-center" name="Create User">Submit</button>
+                    <a href="{% url "login" %}" class="btn btn-secondary">Login</a>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock base%}

@@ -1,0 +1,43 @@
+{% extends "html_user/base_user.html"%}
+{% load widget_tweaks%}
+
+{% block base%}
+<section class="jumbotron jumbotron-fluid text-black text-center">
+    <h1 class="display-4 ">{{ Judul }}</h1>
+    <p class="lead">{{ Subjudul }}</p>
+</section>
+
+<section class="container-fluid glass" >
+    
+        <div class="halaman"  >
+            <h4 class="title text-center mt-2" style="padding-bottom: .5rem;">Upload X-ray Thorax Image</h4>
+
+            <form method="POST" enctype="multipart/form-data" action="predictImage" >
+                <div class="input-group mb-3" >
+                    {% csrf_token %}
+                        {% render_field Main_Form.gambar class="form-control" %}  
+                        <button class="btn btn-outline-secondary" type="submit" id="button-submit" >Upload</button>
+                </div>  
+            </form>
+
+            <div class="text-center" id="loading-container">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+                    
+            <br>
+            <div class="text-center">
+                <figure class="figure">
+                    <img src="database/images/{{Path_Gambar}}" class="img-thumbnail" alt="...">
+                    <figcaption class="figure-caption text-dark">You X-Ray Thorax Image Will Display Here.</figcaption>
+                </figure>
+            </div>
+            <br>
+            <h4>Result : {{Hasil}}</h4>
+            <br>
+            <h4>Confidence Score : {{probability}}</h4>
+        </div>
+    
+</section>
+{% endblock base%}

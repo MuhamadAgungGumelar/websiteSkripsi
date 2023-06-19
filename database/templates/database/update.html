@@ -1,0 +1,33 @@
+{% extends "html_user/base_user.html"%}
+{% load static %}
+{% load tz %}
+{% load widget_tweaks%}
+
+{% block app_css%} 
+<link rel="stylesheet" type="text/css" href="{% static "database/css/styless.css" %}">
+{% endblock app_css%} 
+
+{% block base%}
+<section class="jumbotron jumbotron-fluid text-black text-center" style="margin-top: 3rem; padding-bottom: 0rem;">
+    <h1 class="display-4 ">{{ Judul }}</h1>
+</section>
+
+<section class="container-fluid glass" style="margin-top: -6rem">
+    <h3 class="text-center" style="margin: 2rem;">Update the Database</h3>
+        <div class="data-form ">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">{% render_field Post_Form.category.label %}</label>
+                    {% render_field Post_Form.category class="form-control" id="inputGroupSelect01"%}
+                </div>
+                <br>
+                <div class="input-group mb-3">
+                    {% render_field Post_Form.gambar class="form-control" id="inputGroupFile02" type="file"%}
+                    <button class="btn btn-outline-secondary" type="submit">Upload</button>
+                </div>    
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock base%}

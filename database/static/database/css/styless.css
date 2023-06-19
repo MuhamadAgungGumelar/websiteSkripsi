@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.mainBody{
+    background-color: #e9ecef;
+}
+
+.jumbotron-fluid {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 15rem;
+    margin-top: 2rem;
+
+  
+}
+
+.spinner-border {
+    border-top: 2px solid #f3f3f3;
+    border-right: 2px solid #f3f3f3;
+    border-bottom: 2px solid #f3f3f3;
+    border-left: 4px solid #007bff;
+    width: 1.5rem;
+    height: 1.5rem;
+    animation: spinner-border .75s linear infinite;
+  }
+
+/* Untuk Navbar */
+
+nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+nav li{
+    float: left;
+}
+
+nav a{
+    display: block;
+    font: 100;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-family: arial;
+}
+
+nav a:hover{
+    background-color: rgb(50, 117, 117);
+    border-radius: 10px;
+}
+
+/* Untuk Navbar akhir*/
+
+.glass  {
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+    border: 1px solid rgba(86, 67, 67, 0.08);
+    
+
+    padding-bottom: 2rem; 
+    min-height: 40vw; 
+    margin-top: -3rem; 
+    background-color: white; 
+    max-width: 550px;
+    margin-bottom: 7rem;
+}
+
+.login {
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+    border: 1px solid rgba(86, 67, 67, 0.08);
+    
+
+    padding-bottom: 2rem; 
+    min-height: 40vw; 
+    margin-top: 9rem; 
+    background-color: white; 
+    max-width: 55vh;
+    margin-bottom: 11rem;
+}
+
+.reset{
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+    border: 1px solid rgba(86, 67, 67, 0.08);
+    
+
+    padding-bottom: 2rem; 
+    min-height: 40vw; 
+    margin-top: 9rem; 
+    background-color: white; 
+    max-width: 55vh;
+    margin-bottom: 11rem;
+}
+
+.reset-success{
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+    border: 1px solid rgba(86, 67, 67, 0.08);
+    
+
+    padding-bottom: 2rem; 
+    min-height: 40vw; 
+    margin-top: 9rem; 
+    background-color: white; 
+    max-width: 55vh;
+    margin-bottom: 11rem;
+}
+
+.reset h2{
+    margin-top: 2rem;
+}
+
+.login .reset-confirm{
+    margin-top: 5rem;
+}
+
+.container-reset{
+    margin-top: 2rem;
+}
+
+.container-login{
+    margin-top: 6rem;
+}
+
+figcaption{
+    font-size: medium;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.footer {
+    background-color: rgb(45, 70, 80);
+    color: rgb(7, 5, 5);
+    padding: 20px;
+    text-align: center;
+    height: 60px;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.container .display-4 {
+   padding-top: 1.5rem;
+}
+
+.container .display-4 p{
+    font-size: 2rem;
+}
+
+.container .lead {
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.modal-backdrop {
+    z-index: 1029;
+}
+
+.footer > p {
+    margin-top: 0;
+}
+
+@media screen and (max-width:576px){
+    .glass{
+        min-height: 128vw;
+    }
+
+    .login{
+        min-height: 109vw;
+        margin-bottom: 13rem;
+    }
+}
+
+@media screen and (min-width:577px){
+    .glass, .login {
+        min-height: 80vw;
+    }
+}
+
+@media screen and (min-width:770px){
+    .glass, .login{
+        min-height: 69vw;
+    }
+}
+
+@media screen and (min-width:870px){
+    .glass, .login{
+        min-height: 60vw;
+    }
+}
+
+@media screen and (min-width:1000px){
+    .glass, .login{
+        min-height: 53vw;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .glass, .login{
+        min-height: 44vw;
+    }
+}
+
+@media screen and (min-width:1400px){
+    .glass, .login{
+        min-height: 37vw;
+    }
+}
+
+@media screen and (min-width:1560px){
+    .glass, .login{
+        min-height: 32vw;
+    }
+}
+
+
+

@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{Top}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block app_css%} 
+        <link rel="stylesheet" type="text/css" href="{% static "css/styl.css" %}">
+    {% endblock app_css%}
+    {% include "snippets/styles.html" %}
+</head>
+
+<body style="background-color: #e9ecef;">
+    
+    {% include "snippets/navbar_user.html" %}
+    
+    {% block base%}
+    {% endblock base%}
+    
+    {% include "snippets/footer.html" %}
+    
+    
+    {% include "snippets/scripts.html" %}
+</body>
+</html>
+
+
+

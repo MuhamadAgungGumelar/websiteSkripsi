@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{Top}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block app_css%} 
+        <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
+    {% endblock app_css%}
+    {% include "snippets/styles.html" %}
+</head>
+
+<body>
+
+    {% include "snippets/navbar_user.html" %}
+    
+    <section class="jumbotron jumbotron-fluid" >
+        <div class="container text-black text-center">
+            
+            {% block header%} 
+    
+            {% endblock header%}
+    
+        </div>
+    
+        <div class="container bg-white text-dark shadow" style="margin-top: -3rem; margin-bottom: 0rem; min-height: 14rem; max-width: 587px; border-radius: 1rem;">
+            {% block content3%}
+            {% endblock content3%}
+        </div>
+    </section>
+    
+    <footer class="footer ">
+        <p class="copyright" style="color: aliceblue; font-size: .9rem; font-weight: bold; margin-top: 2rem;" >Copyright &copy; 2023 Muhamad Agung Gumelar-1806536</p>
+    </footer>
+    
+    {% include "snippets/scripts.html" %}
+</body>
+</html>

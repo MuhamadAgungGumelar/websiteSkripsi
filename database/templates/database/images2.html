@@ -1,0 +1,33 @@
+{% extends "html_user/base_user.html"%}
+{% load static %}
+
+{% block app_css%} 
+<link rel="stylesheet" type="text/css" href="{% static "database/css/styless.css" %}">
+{% endblock app_css%} 
+
+{% block base%}
+<section class="jumbotron jumbotron-fluid text-black text-center" style="margin-top: 3rem; padding-bottom: 0rem;">
+    <h1 class="display-4 ">{{ Judul }}</h1>
+</section>
+
+<section class="container-fluid glass" style="margin-top: -6rem">
+    <div class="data-form">
+        <br>
+        <h2 class="text-center">Result of Lung Disease Detection Data</h2>
+        <h5>
+            <figure class="text-center" style="margin-top: 20px;">
+                <img src="{{Post_Model.gambar}}" class="img-fluid img-thumbnail" alt="">
+            </figure>
+        </h5>
+        <h6>
+            <div class="text-center">
+                <h3>Result : {{Post_Model.category}}</h3>
+                <br>
+                <!-- <h3>Probability : {{probability}}</h3> -->
+            </div>
+        </h6>
+</div>
+</section>
+{% endblock base%}
+
+

@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{Top}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block app_css%} 
+        <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
+    {% endblock app_css%}
+    {% include "snippets/styles.html" %}
+</head>
+
+<body>
+
+    {% include "snippets/navbar_user.html" %}
+    
+    <section class="jumbotron jumbotron-fluid" >
+        <div class="container text-black text-center">
+            
+            {% block header%} 
+    
+            {% endblock header%}
+    
+        </div>
+    
+    </section>
+    
+    <section class="container-fluid" style="background-color: #e9ecef; padding-bottom: 2rem; min-height: 40vw;">
+        <div class="container glass" style="margin-top: -100px; background-color: white; max-width: 550px;" name="myBody">
+            {% block content1%}
+            {% endblock content1%}
+        </div>
+    </section>
+    
+    <footer class="footer ">
+        <p class="copyright" style="color: aliceblue; font-size: .9rem; font-weight: bold;" >Copyright &copy; 2023 Muhamad Agung Gumelar-1806536</p>
+    </footer>
+    
+    {% include "snippets/scripts.html" %}
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- <div class="container glass2" style="margin-top:0px; width: 500px;">
+        {% block content2%}
+        {% endblock content2%}
+</div>
+
+<div class="container bg-white text-dark shadow" style="margin-top: -60px;">
+        {% block content3%}
+        {% endblock content3%}
+</div> 
+</div> -->
