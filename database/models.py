@@ -1,13 +1,10 @@
 from datetime import datetime
-from tkinter.tix import Tree
 from unicodedata import name
 from django.db import models
 from django.utils.text import slugify
 from django.core.exceptions import ValidationError
 from django.utils import timezone, formats
 import pytz
-import datetime
-import os
 
     # indonesia_tz = pytz.timezone('Asia/Jakarta')
     # time = timezone.localtime(waktu_update)
