@@ -5,5 +5,5 @@ pip install tensorflow
 pip install Pillow
 pip install numpy
 pip install matplotlib
-pip install MySQL-python
+pip install mysqlclient
 python3.9 manage.py collecstatic
