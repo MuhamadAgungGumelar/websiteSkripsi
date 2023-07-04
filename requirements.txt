@@ -1,0 +1,10 @@
+Django==4.2.3
+django-widget-tweaks
+keras
+tensorflow
+Pillow
+numpy
+matplotlib
+psycopg2-binary==2.8.6
+Keras-Preprocessing
+pytz

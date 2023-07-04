@@ -1,11 +1,4 @@
-pip install Django==4.2.3
-pip install django-widget-tweaks
-pip install keras
-pip install tensorflow
-pip install Pillow
-pip install numpy
-pip install matplotlib
-pip install psycopg2-binary==2.8.6
-pip install Keras-Preprocessing
-pip install pytz
+python3.9 -m pip install -r requirements.txt
+python3.9 manage.py makemigrations
+python3.9 manage.py migrate
 python3.9 manage.py collectstatic
