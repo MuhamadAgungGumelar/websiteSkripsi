@@ -6,4 +6,6 @@ pip install Pillow
 pip install numpy
 pip install matplotlib
 pip install psycopg2-binary==2.8.6
+pip install Keras-Preprocessing
+pip install pytz
 python3.9 manage.py collectstatic

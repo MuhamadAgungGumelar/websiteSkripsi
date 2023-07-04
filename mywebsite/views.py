@@ -46,7 +46,7 @@ def Login(request):
         return redirect('database:index')
      
     if request.method == "GET":
-        if request.user.is_authenticated():
+        if request.user.is_authenticated:
             return redirect('index')
 
     context = {
@@ -129,7 +129,7 @@ def index(request):
     main_form = MainForm(request.POST, request.FILES)
 
     template_name=None
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         template_name= 'index_user.html'
     else:
         template_name= 'index_anonymous.html'

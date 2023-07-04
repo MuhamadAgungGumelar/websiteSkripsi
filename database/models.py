@@ -10,6 +10,7 @@ import pytz
     # time = timezone.localtime(waktu_update)
     # time.strftime("%d %B %Y %H:%M:%S")
 class PostModel(models.Model):
+    id = models.BigAutoField(primary_key=True)
     gambar = models.ImageField(upload_to='', null = True, blank = False)
     waktu = models.DateTimeField(auto_now_add=True)
     waktu_update = models.DateTimeField(auto_now=True)

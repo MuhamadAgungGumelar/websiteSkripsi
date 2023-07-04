@@ -149,7 +149,7 @@ def predictImage(request):
             # accuracy = round(scores[1]*100, 2)
 
     template_name=None
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         template_name= 'index_user.html'
     else:
         template_name= 'index_anonymous.html'
@@ -192,7 +192,7 @@ def index(request):
     post_form = PostForm(request.POST, request.FILES)
 
     template_name=None
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         template_name= 'database/index_user.html'
     else:
         template_name= 'database/index_anonymous.html'

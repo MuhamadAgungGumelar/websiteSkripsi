@@ -95,9 +95,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'IiLuo1DTL9kd0hzPP3rL',
-        'HOST': 'containers-us-west-6.railway.app',
-        'PORT': '5639',
+        'PASSWORD': 'LpHTIGtjS2CjtEXIdilU',
+        'HOST': 'containers-us-west-80.railway.app',
+        'PORT': '7891',
         'OPTIONS': {
             'options': '-c timezone=Asia/Jakarta',
         },
@@ -171,6 +171,8 @@ MEDIA = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'database/images/')
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
