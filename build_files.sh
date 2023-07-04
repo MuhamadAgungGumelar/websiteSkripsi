@@ -6,4 +6,4 @@ pip install mysqlclient
 pip install Pillow
 pip install numpy
 pip install matplotlib
-python3.7.9 manage.py collecstatic
+python3.7 manage.py collecstatic
