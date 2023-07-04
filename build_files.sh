@@ -1,4 +1,4 @@
-pip install Django==1.11.29
+pip install Django==4.2.3
 pip install django-widget-tweaks
 pip install keras
 pip install tensorflow
