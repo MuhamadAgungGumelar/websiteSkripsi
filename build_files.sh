@@ -6,4 +6,4 @@ pip install Pillow
 pip install numpy
 pip install matplotlib
 pip install psycopg2-binary==2.8.6
-python3.9 manage.py collecstatic
+python3.9 manage.py collectstatic
