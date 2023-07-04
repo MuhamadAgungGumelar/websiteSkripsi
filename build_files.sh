@@ -1,3 +1,9 @@
-pip install -r requirements.txt
+pip install Django==1.11.29
+pip install django-widget-tweaks
+pip install keras
+pip install tensorflow
 pip install mysqlclient
+pip install Pillow
+pip install numpy
+pip install matplotlib
 python3.7.9 manage.py collecstatic
