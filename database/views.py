@@ -26,7 +26,7 @@ model_graph = tf.compat.v1.Graph()
 with model_graph.as_default():
     tf_session = tf.compat.v1.Session()
     with tf_session.as_default():
-        model = load_model('models/model_hybrid4.h5')
+        model = load_model('models/model_hybrid3.h5')
 
 def delete(request, delete_id):
     PostModel.objects.filter(id=delete_id).delete()
